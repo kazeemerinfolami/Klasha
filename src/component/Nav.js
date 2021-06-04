@@ -1,9 +1,10 @@
 import React from 'react'
 import CompanyLogo from "../assets/Images/logo.png"
 
-function Nav() {
+function Nav({ open, CloseMenu }) {
     return (
-        <div className="Container-Nav-Wrapper">
+        <div className={open ? "Container-Nav-Wrapper open-nav nav-body-con" : "Container-Nav-Wrapper close-nav"}>
+            <div className="close-icon-wrapper" onClick={CloseMenu}><span className="iconify close-icon" data-icon="ri:close-fill" data-inline="false"></span></div>
             <div className="company-logo-wrapper"><img src={CompanyLogo} alt="logo" /></div>
             <div className="nav-title">Main Page</div>
             <a href="home.com">

@@ -195,7 +195,7 @@ padding: 5px;
 .date-wrapper{
   width: 150px;
   background-color: #ffffff;
-  
+
 }
 .input-box{
 border: none;
@@ -270,21 +270,49 @@ border: 1px solid #EBEBEB;
 color: #EBEBEB;
 cursor: pointer;
 }
-
-
+.close-icon{
+  display: none;
+}
 
 /*..... Media Query ......*/
 @media screen and (max-width: 1020px){
- .Container-Nav-Wrapper{
-  display: none;
+  .close-icon{
+  display: block;
 }
+.close-icon-wrapper{
+position: absolute;
+  right: 5px;
+  font-size: 45px !important;
+  color: #2C665D;
+}
+.nav-body-con{
+  position: relative;
+}
+   .Container-Nav-Wrapper.close-nav {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            z-index: 1;
+            height: 100%;
+             width: 50%;
+  transition: all .9s ease;
+        }
+        .Container-Nav-Wrapper.open-nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            height: 100%;
+             width: 100%;
+            transition: all .5s ease;
+        }
 .Container-Body-Content-wrapper{
   padding: 10px;
 }
 .hamburger{
   display: block;
   font-size: 30px;
-  margin-left: 5px;
+  margin-right: 3px;
 }
 .Dashboard-balance-card{
   width: 100%;
@@ -303,11 +331,6 @@ cursor: pointer;
   padding: 10px;
 }
 }
-@media screen and (max-width: 350px){
-.top-nav-pic-container{
-display: none;
-}
-}
 @media screen and (max-width: 600px){
   .table-wrapper{
   margin-top: 10px;
@@ -320,10 +343,12 @@ display: none;
   white-space: nowrap;
 }
 }
-
-/* @media screen and (max-width: 800px){
-
- .Container-Nav-Wrapper{
-  display: none;
+@media screen and (max-width: 350px){
+.top-nav-pic-container{
+display: none;
 }
-} */
+ .Container-Nav-Wrapper{
+  position: fixed;
+  width: 70%;  
+}
+}
