@@ -291,7 +291,7 @@ position: absolute;
    .Container-Nav-Wrapper.close-nav {
             position: fixed;
             top: 0;
-            left: -250px;
+            left: -1000px;
             z-index: 1;
             height: 100%;
              width: 50%;
@@ -301,6 +301,7 @@ position: absolute;
             position: fixed;
             top: 0;
             left: 0;
+            bottom: 0;
             z-index: 2;
             height: 100%;
              width: 100%;
